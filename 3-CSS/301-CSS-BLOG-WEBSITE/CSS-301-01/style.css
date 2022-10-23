@@ -1,1 +1,20 @@
 /* start your css here */
+body{
+   text-align:center;
+   margin: 10px 30px;
+   color:grey;
+  
+}
+.image{
+ margin-right: 40px;
+ margin-left:60px;
+ background-size: cover;
+   
+}
+.con{
+     text-align: justify;
+     margin: 10px 50px;
+}
+#str{
+    font-weight: bolder;
+}
