@@ -6,8 +6,8 @@ body{
   
 }
 .image{
- margin-right: 40px;
- margin-left:60px;
+   margin:0 auto;
+
  background-size: cover;
    
 }
