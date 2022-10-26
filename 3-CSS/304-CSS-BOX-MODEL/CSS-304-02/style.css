@@ -1,1 +1,51 @@
 /* start your css here */
+.container{
+    width: 597px;
+    height: 573px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    padding: 20px 20px 40px 20px;
+    font-weight: bold;
+
+}
+.title{
+    text-align: left;
+    font-family: sans-serif;
+}
+input{
+    width: 500px;
+    height: 50px;
+    font-weight: bold;
+    color: black;
+}
+#cb{
+    width: 30px;
+}
+button{
+   border:4px solid white;
+   color:white;
+   background-color: black;
+   border-radius: 5px;
+   padding: 10px 40px;
+   margin-top: 20px;
+   margin-left:200px;
+   font-size: 20px;
+   
+}
+input{
+    margin: 10px;
+}
+#disc{
+    font-weight: lighter;
+    font-size: 20px;
+    font-style: italic;
+    font-family: sans-serif;
+    padding: 10px;
+  
+}
+
+#one{
+    display: flex;
+}
+
