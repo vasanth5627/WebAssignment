@@ -1,1 +1,10 @@
-/* start your styling here  */
+*{
+    padding: 0;
+    margin:0;
+    background-color: lightgrey;
+}
+
+img{
+    background-size: cover;
+    width: 98vw;
+}
