@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    padding-top: 10%;
+}
+
+input{
+    border: 2px solid springgreen;
+    padding: 10px 20px;
+}
+
+p{
+    margin: 30px;
+    font-family: sans-serif;
+    
+}
