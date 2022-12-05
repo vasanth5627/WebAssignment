@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.has-children{
+    margin-top: 5%;
+}
+
+.has-children>*{
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    margin: 5px auto;
+    font-family: sans-serif;
+}
+
