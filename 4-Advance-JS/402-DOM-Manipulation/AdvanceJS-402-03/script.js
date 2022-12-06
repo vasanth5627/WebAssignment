@@ -3,7 +3,8 @@ const addBtn_div = document.getElementById('addbtn');
 const ulList_div = document.querySelector('.list');
 const list_div = ulList_div.querySelector('ul');
 
-addBtn_div.addEventListener('click',function(){
+addBtn_div.addEventListener('click',function(this){
+    console.log(this);
     const li_div = document.createElement('li');
     const li_btn = document.createElement('button');
     li_div.setAttribute('class','litext')

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
+    border: 1px solid grey;
+    width: fit-content;
+    padding: 10px;
+}
+span{
+    color: green;
+}
+
+.code{
+    text-align: center;
+    font-size: 4rem;
+    color: green;
+    border: 1px solid grey;
+    width: 100px;
+    margin: 4% auto;
+    padding: 10px 3px;
+}
