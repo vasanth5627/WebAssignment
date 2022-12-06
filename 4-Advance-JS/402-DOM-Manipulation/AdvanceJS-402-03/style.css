@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+   margin-left: 5%;
+    
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.inp{
+    margin-bottom: 10px;    
+}
+
+
+.litext{
+    font-family: sans-serif;
+    font-size: 1rem;
+    
+   
+}
+
+#delbtn{
+    margin: 10px;
+    padding: 3px 10px;
+    
+}
