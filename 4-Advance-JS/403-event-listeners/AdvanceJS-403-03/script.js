@@ -13,7 +13,7 @@ function calculateTip(){
     let bill = bill_div.value;
     let service = service_div.value;
     let people = people_div.value;
-    let total = (bill*service)/people;
+    let total = ((bill*service)/people).toFixed(2);
     amount_div.textContent =total;
     tip_div.style.display='block';
     

@@ -16,6 +16,7 @@ So, don't be afraid to try it.
 
 ![Solar System](./image/dom_min_project_solar_system_day_4.1.gif)
 
+
 # Steps to submit your assignments
 
 - Complete the assignments listed above in respective folders.
