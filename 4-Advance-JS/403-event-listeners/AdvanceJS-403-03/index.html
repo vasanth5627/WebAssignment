@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Tip-Calculator</title>
   </head>
   <body>
-    Start your code here
+    <div class="main">
+      <div class="calculator">
+          <div class="content">
+            <div class="head">  <h1>Vasanth's Tip Calculator</h1> </div>
+          
+
+            <p>How much was your bill?</p>
+            <p>$ <input type="number" id="bill"></p> 
+
+            <p>How was your service?</p>
+
+            <select name="choose an option" id="service">
+             
+              <option value="0">Select level of Service</option>
+              <option value="0.3">30% - Outstanding</option>
+              <option value="0.2">20% - Good</option>
+              <option value="0.15">15% - It Was OK!</option>
+              <option value="0.1">10% - Bad</option>
+              <option value="0.05">5% - Terrible</option>
+            </select>
+
+            <p>How many people Sharing the Bill?</p>
+            <p><input type="number" id="people"> people</p>
+
+            <div class="btn"><button id="calc">Calculate</button></div>
+
+            <div class="tip">
+              <p>TIP AMOUNT</p>
+              <sup>$</sup><label id="amount">4.00</label>
+              <p>each</p>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
