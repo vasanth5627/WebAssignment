@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: url("ProjectImage/galaxy.gif");
+    height: 100vh;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    text-shadow: 0 0 2px white;
+}
+
+.inputs{
+    
+    text-align: center;
+    margin-top: 5%;
+}
+
+#weight {
+    padding: 5px 20px;
+    margin-right: 10px;
+}
+
+#gravity{
+    padding: 5px 20px;
+    margin-right: 10px;
+}
+
+#btn{
+    padding: 5px 5px;
+    background-color:#6D6C6F;
+    
+}
+
+.data{
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 30px;
+    background-color: rgba(30, 30, 30, 0.7);
+    width: fit-content;
+    margin: 50px auto;
+}
+
+img{
+    width: 250px;
+
+}
+
+.ans{
+    
+    background-color: rgba(57, 57, 57, 0.5);
+    padding: 10px 100px;
+}
+.con{
+    text-align: center;
+    margin-top: 5px;
+}
+.num{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: rgba(73, 73, 73, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.neg{
+    width: fit-content;
+    margin: 50px auto;
+    color: white;
+    padding: 40px 100px;
+    background-color: rgba(30, 30, 30, 0.7);
+}
+.con1{
+    background-color: rgba(57, 57, 57, 0.5);
+    padding: 10px 100px;
+}
+
+.two{
+    display: none;
+}

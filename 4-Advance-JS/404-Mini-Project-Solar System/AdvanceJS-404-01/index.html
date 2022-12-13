@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Solar System</title>
   </head>
   <body>
-    Start your code here
+    <h1>Calculate a weight of an object on a planet</h1>
+    <div class="inputs">
+        <input type="number" id="weight" placeholder="Mass in kilogram">
+        <select name="gravitational-pull" id="gravity">
+            <option value="0">Select an Option</option>
+            <option value="9.8">Earth</option>
+            <option value="24.79">Jupiter</option>
+            <option value="3.72">Mars</option>
+            <option value="3.7">Mercury</option>
+            <option value="1.62">Moon</option>
+            <option value="11.15">Neptune</option>
+            <option value="0.062">Pluto</option>
+            <option value="10.44">Saturn</option>
+            <option value="8.873">Uranus</option>
+            <option value="8.87">Venus</option>
+        </select>
+        <input type="button" value="Calculate Weight" id="btn">
+    </div>
+    <div class="data">
+      <div class="image">
+        <img src="ProjectImage/earth.png" alt="earth" id="image">
+      </div>
+      <div class="ans">
+        <div class="con">
+          <p>The Weight of object on<b id="pname"> EARTH</b> is</p>
+          
+        </div>
+        <div class="num">
+          7.00 N
+        </div>
+  
+      </div>
+
+    </div>
+    <div class="two">
+      <div class="neg">
+        <div class="con1">
+          The Mass is required
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
