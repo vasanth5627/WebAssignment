@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+}
+
+.container{
+    margin-bottom: 30px;
+}
+
+#input{
+    height: 1.5rem;
+    width: 20rem;
+    padding: 8px;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.image_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+}
