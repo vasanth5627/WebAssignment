@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>409-01</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    Start your code here
+      <h1>Validating Web Form</h1>
+      <form action="#">
+        <div class="info">
+          <h3>First Name</h3>
+          <input type="text" id="firstNameInput">
+          <p class="error">First name must be alphanumeric and contain 3-16 characters</p>
+        </div>
+        <div class="info">
+          <h3>Last Name</h3>
+          <input type="text" id="lastNameInput">
+          <p class="error">Last name must be alphanumeric and contain 3-16 characters</p>
+        </div>
+        <div class="info">
+          <h3>Email</h3>
+          <input type="email" id="emailInput">
+          <p class="error">Email must be valid address, e.g. example@example.com</p>
+        </div>
+        <div class="info">
+          <h3>Password</h3>
+          <input type="password" id="passInput">
+          <p class="error">Password must be alphanumeric (@, _ and - are also allowed) and between 6-20 character</p>
+        </div>
+        <div class="info">
+          <h3>Phone Number</h3>
+          <input type="number" id="telInput">
+          <p class="error">A valid phone number and should be 10 numbers</p>
+        </div>
+        <div class="info">
+          <h3>Your Bio</h3>
+          <input type="text" id="bioInput">
+          <p class="error">Bio must contain only lowercase letters, underscores, hyphens and 8-50 characters</p>
+        </div>
+        <button id="submitBtn">Submit</button>
+      </form>
+
+    <script src="./script.js"></script>
   </body>
 </html>

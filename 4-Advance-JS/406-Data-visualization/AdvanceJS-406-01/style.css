@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url();
+}
+
+.container{
+    text-align: center;
+    padding: 100px 0;
+    background: url(https://i.postimg.cc/Hsw-ftGGG/globe-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    color: white;
+}
+
+.heading{
+    font-size: xxx-large;
+}
+
+.buttons{
+    margin: 20px 0;
+}
+
+.buttons button{
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #7b53d2;
+    color: rgba(255, 255, 255, 0.735);
+}
+
+.inputs input{
+    width: 500px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: x-large;
+}
+
+.inputs i{
+    font-size: x-large;
+}
+
+.listOfCountries{
+    background-color: bisque;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.country-card{
+    height: 200px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    border-radius: 5px;
+    background: linear-gradient(rgba(69, 63, 187, 0.42), rgba(58, 58, 60, 0.42)), url('https://i.postimg.cc/85fYJ9d0/map-image.jpg');
+}
+
+.select{
+    background-color: #581cb8 !important;
+}
