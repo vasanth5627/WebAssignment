@@ -100,8 +100,8 @@ body {
 .rabbit {
   position: relative;
   display: block;
-  width: clamp(200px, 44vw, 280px);
-  height: clamp(200px, 44vw, 280px);
+  width: clamp(220px, 44vw, 300px);
+  height: clamp(250px, 48vw, 320px);
   margin: 0 auto;
   border: none;
   background: transparent;
@@ -121,124 +121,26 @@ body {
   border-radius: 30px;
 }
 
-.ear {
-  position: absolute;
-  top: 4px;
-  width: 30px;
-  height: 92px;
-  background: linear-gradient(180deg, #fffdfd 0%, #ffeaf4 100%);
-  border: 4px solid #f5a5c9;
-  border-bottom: none;
-  border-radius: 50% 50% 25% 25%;
-  z-index: 1;
-  box-shadow: inset 0 0 10px rgba(255, 144, 189, 0.25);
+.bunny-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
-.ear.left {
-  left: 62px;
-  transform: rotate(-14deg);
-}
-
-.ear.right {
-  right: 62px;
-  transform: rotate(14deg);
-}
-
-.head {
-  position: absolute;
-  left: 50%;
-  top: 54px;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 120px;
-  background: linear-gradient(180deg, #fff7fb 0%, #fef2f7 100%);
-  border: 5px solid #f3b1d1;
-  border-radius: 48% 48% 46% 46%;
-  box-shadow: inset 0 -8px 0 rgba(255, 182, 210, 0.18);
-  z-index: 2;
-}
-
-.eye {
-  position: absolute;
-  top: 44px;
-  width: 12px;
-  height: 18px;
-  background: #3c2a2f;
-  border-radius: 50%;
-}
-
-.eye.left { left: 42px; }
-.eye.right { right: 42px; }
-
-.nose {
-  position: absolute;
-  left: 50%;
-  top: 62px;
-  width: 18px;
-  height: 14px;
-  transform: translateX(-50%);
-  background: #ff8db8;
-  border-radius: 50% 50% 60% 60%;
-  box-shadow: 0 0 0 3px rgba(255, 165, 206, 0.18);
-}
-
-.blush {
-  position: absolute;
-  top: 72px;
-  width: 18px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 150, 191, 0.45);
-}
-
-.blush.left { left: 18px; }
-.blush.right { right: 18px; }
-
-.body {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  width: 170px;
-  height: 90px;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, #fffdfd 0%, #ffeaf4 100%);
-  border: 5px solid #f3b1d1;
-  border-radius: 42% 42% 36% 36%;
-  z-index: 1;
-}
-
-.paw {
-  position: absolute;
-  bottom: -6px;
-  width: 28px;
-  height: 28px;
-  background: #fff;
-  border: 4px solid #f3b1d1;
-  border-radius: 50%;
-}
-
-.paw.left { left: 24px; }
-.paw.right { right: 24px; }
-
-.arm {
-  position: absolute;
-  top: 32px;
-  width: 26px;
-  height: 58px;
-  background: linear-gradient(180deg, #fff7fb, #ffeaf4);
-  border: 4px solid #f3b1d1;
-  border-radius: 20px;
-  transform-origin: top center;
+.arm-left,
+.arm-right {
+  transform-box: fill-box;
   transition: transform 0.4s ease;
 }
 
-.arm.left { left: 16px; transform: rotate(36deg); }
-.arm.right { right: 16px; transform: rotate(-36deg); }
+.arm-left { transform-origin: 100% 0%; }
+.arm-right { transform-origin: 0% 0%; }
 
-.rabbit.sorry-mode .arm.left { transform: rotate(48deg) translateY(-5px); }
-.rabbit.sorry-mode .arm.right { transform: rotate(-48deg) translateY(-5px); }
-.rabbit.love-mode .arm.left { transform: rotate(-18deg) translateY(-8px); }
-.rabbit.love-mode .arm.right { transform: rotate(18deg) translateY(-8px); }
+.rabbit.sorry-mode .arm-left { transform: rotate(-14deg) translateY(-4px); }
+.rabbit.sorry-mode .arm-right { transform: rotate(14deg) translateY(-4px); }
+.rabbit.love-mode .arm-left { transform: rotate(18deg) translateY(-8px); }
+.rabbit.love-mode .arm-right { transform: rotate(-18deg) translateY(-8px); }
 
 .rabbit.pulse { animation: bunny-bounce 0.45s ease; }
 

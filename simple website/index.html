@@ -29,23 +29,68 @@
         <h1 id="messageBubble">Tap the bunny</h1>
 
         <button id="rabbit" class="rabbit" type="button" aria-label="Tap the rabbit to reveal the message">
-          <span class="ear left"></span>
-          <span class="ear right"></span>
+          <svg class="bunny-art" viewBox="0 0 240 270" aria-hidden="true">
+            <defs>
+              <linearGradient id="bunny-fur" x1="0" y1="0" x2="0.8" y2="1">
+                <stop offset="0" stop-color="#fff" />
+                <stop offset="1" stop-color="#fff0f6" />
+              </linearGradient>
+              <linearGradient id="bunny-ear" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffb5d1" />
+                <stop offset="1" stop-color="#ff82b4" />
+              </linearGradient>
+              <filter id="bunny-shadow" x="-30%" y="-30%" width="160%" height="170%">
+                <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#b64d7d" flood-opacity=".14" />
+              </filter>
+            </defs>
 
-          <span class="head">
-            <span class="eye left"></span>
-            <span class="eye right"></span>
-            <span class="nose"></span>
-            <span class="blush left"></span>
-            <span class="blush right"></span>
-          </span>
+            <ellipse cx="120" cy="251" rx="57" ry="8" fill="#d978a0" opacity=".14" />
 
-          <span class="body">
-            <span class="paw left"></span>
-            <span class="paw right"></span>
-            <span class="arm left"></span>
-            <span class="arm right"></span>
-          </span>
+            <g filter="url(#bunny-shadow)" stroke="#e99fbe" stroke-width="3.5" stroke-linejoin="round">
+              <path d="M81 119C72 92 59 57 60 29c1-22 20-26 29-8 12 23 19 57 21 91Z" fill="url(#bunny-fur)" />
+              <path d="M159 119c9-27 22-62 21-90-1-22-20-26-29-8-12 23-19 57-21 91Z" fill="url(#bunny-fur)" />
+              <path d="M82 88c-6-21-11-43-10-57 1-9 7-11 11-2 8 17 13 40 16 58Z" fill="url(#bunny-ear)" stroke="none" />
+              <path d="M158 88c6-21 11-43 10-57-1-9-7-11-11-2-8 17-13 40-16 58Z" fill="url(#bunny-ear)" stroke="none" />
+            </g>
+
+            <g stroke="#e99fbe" stroke-width="3.5" stroke-linejoin="round">
+              <path d="M79 164c-17 9-27 27-27 48 0 21 14 35 33 35h70c19 0 33-14 33-35 0-21-10-39-27-48Z" fill="url(#bunny-fur)" />
+              <ellipse cx="78" cy="235" rx="25" ry="14" fill="#fff" />
+              <ellipse cx="162" cy="235" rx="25" ry="14" fill="#fff" />
+              <ellipse cx="78" cy="238" rx="8" ry="5" fill="#ffb8d2" stroke="none" />
+              <ellipse cx="162" cy="238" rx="8" ry="5" fill="#ffb8d2" stroke="none" />
+            </g>
+
+            <g class="arm-left" fill="url(#bunny-fur)" stroke="#e99fbe" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M76 177c-13 7-20 19-17 31 2 8 10 12 17 7l19-17c6-6 5-15-1-20-5-4-12-4-18-1Z" />
+            </g>
+            <g class="arm-right" fill="url(#bunny-fur)" stroke="#e99fbe" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M164 177c13 7 20 19 17 31-2 8-10 12-17 7l-19-17c-6-6-5-15 1-20 5-4 12-4 18-1Z" />
+            </g>
+
+            <ellipse cx="120" cy="119" rx="72" ry="64" fill="url(#bunny-fur)" stroke="#e99fbe" stroke-width="3.5" />
+
+            <g fill="#49333d">
+              <ellipse cx="94" cy="112" rx="5.5" ry="8" />
+              <ellipse cx="146" cy="112" rx="5.5" ry="8" />
+            </g>
+            <g fill="#fff">
+              <circle cx="92" cy="109" r="1.8" />
+              <circle cx="144" cy="109" r="1.8" />
+            </g>
+
+            <ellipse cx="77" cy="132" rx="12" ry="6.5" fill="#ffb3cb" opacity=".65" />
+            <ellipse cx="163" cy="132" rx="12" ry="6.5" fill="#ffb3cb" opacity=".65" />
+
+            <g fill="none" stroke="#e6a0bc" stroke-width="2" stroke-linecap="round" opacity=".85">
+              <path d="M65 125 45 120M65 133 43 135M175 125l20-5M175 133l22 2" />
+            </g>
+
+            <ellipse cx="112" cy="130" rx="11" ry="8" fill="#fff" />
+            <ellipse cx="128" cy="130" rx="11" ry="8" fill="#fff" />
+            <path d="M114 122c0-4 6-5 6-1 0-4 6-3 6 1 0 4-6 7-6 7s-6-3-6-7Z" fill="#ff79a9" />
+            <path d="M120 129v5m0 0c-4 5-8 4-10 1m10-1c4 5 8 4 10 1" fill="none" stroke="#9b526d" stroke-width="2" stroke-linecap="round" />
+          </svg>
         </button>
 
         <p class="hint">Tap to reveal</p>
