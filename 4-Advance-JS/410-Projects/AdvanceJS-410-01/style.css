@@ -17,6 +17,8 @@ nav{
     background-color: #1b1d1d;
 }
 
+
+
 .nav-left{
     display: flex;
     justify-content: center;
@@ -100,3 +102,4 @@ nav{
 .user a{
     text-decoration: none;
 }
+
