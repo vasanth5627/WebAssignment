@@ -100,8 +100,8 @@ body {
 .rabbit {
   position: relative;
   display: block;
-  width: clamp(220px, 44vw, 300px);
-  height: clamp(250px, 48vw, 320px);
+  width: clamp(240px, 48vw, 330px);
+  height: clamp(340px, 64vw, 400px);
   margin: 0 auto;
   border: none;
   background: transparent;
@@ -121,6 +121,21 @@ body {
   border-radius: 30px;
 }
 
+.bunny-stage {
+  position: absolute;
+  inset: 0 0 42px;
+  display: block;
+  visibility: hidden;
+  transform: translateY(62%) scale(0.88);
+  transform-origin: center bottom;
+  transition: transform 1.15s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.rabbit.is-open .bunny-stage {
+  visibility: visible;
+  transform: translateY(12px) scale(0.92);
+}
+
 .bunny-art {
   display: block;
   width: 100%;
@@ -128,21 +143,104 @@ body {
   overflow: visible;
 }
 
+.gift-box {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 46%;
+  overflow: visible;
+}
+
+.gift-lid {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transition: transform 0.8s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.rabbit.is-open .gift-lid {
+  transform: translate(190px, -150px) rotate(16deg);
+}
+
 .arm-left,
 .arm-right {
   transform-box: fill-box;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .arm-left { transform-origin: 100% 0%; }
 .arm-right { transform-origin: 0% 0%; }
 
-.rabbit.sorry-mode .arm-left { transform: rotate(-14deg) translateY(-4px); }
-.rabbit.sorry-mode .arm-right { transform: rotate(14deg) translateY(-4px); }
-.rabbit.love-mode .arm-left { transform: rotate(18deg) translateY(-8px); }
-.rabbit.love-mode .arm-right { transform: rotate(-18deg) translateY(-8px); }
+.rabbit.is-sorry .arm-left { transform: rotate(-14deg) translateY(-4px); }
+.rabbit.is-sorry .arm-right { transform: rotate(14deg) translateY(-4px); }
+.rabbit.is-love .arm-left { transform: rotate(18deg) translateY(-8px); }
+.rabbit.is-love .arm-right { transform: rotate(-42deg) translateY(-13px); }
 
-.rabbit.pulse { animation: bunny-bounce 0.45s ease; }
+.eyes-closed,
+.kiss-mouth,
+.tears,
+.flower,
+.kiss-heart {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.eyes-closed,
+.kiss-mouth {
+  visibility: hidden;
+}
+
+.rabbit.is-sorry .tears,
+.rabbit.is-love .flower,
+.rabbit.is-love .kiss-heart {
+  opacity: 1;
+}
+
+.rabbit.is-sorry .tear-left {
+  animation: tears-fall 1s ease-in infinite;
+}
+
+.rabbit.is-sorry .tear-right {
+  animation: tears-fall 1s ease-in 0.5s infinite;
+}
+
+.rabbit.is-love .eyes-open,
+.rabbit.is-love .bunny-smile {
+  opacity: 0;
+}
+
+.rabbit.is-love .eyes-closed,
+.rabbit.is-love .kiss-mouth {
+  visibility: visible;
+  opacity: 1;
+}
+
+.rabbit.is-love .flower {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flower-offer 1.2s ease-in-out infinite alternate;
+}
+
+.rabbit.is-love .bunny-stage {
+  animation: happy-bob 1.4s ease-in-out infinite;
+}
+
+.tear {
+  fill: #64c8f2;
+  filter: drop-shadow(0 1px 2px rgba(66, 163, 211, 0.25));
+}
+
+.kiss-heart {
+  fill: #ff79a9;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.rabbit.is-love .kiss-heart {
+  animation: kiss-float 1s ease-in-out infinite alternate;
+}
 
 .hint {
   margin: 1rem 0 0;
@@ -157,13 +255,55 @@ body {
   50% { transform: translateY(-12px) scale(1.08); }
 }
 
-@keyframes bunny-bounce {
-  0% { transform: scale(1); }
-  35% { transform: scale(1.06); }
-  100% { transform: scale(1); }
+@keyframes happy-bob {
+  0%, 100% { transform: translateY(12px) scale(0.92); }
+  50% { transform: translateY(4px) scale(0.92); }
+}
+
+@keyframes tears-fall {
+  0% { transform: translateY(-2px); opacity: 0; }
+  25% { opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0; }
+}
+
+@keyframes flower-offer {
+  from { transform: rotate(-5deg); }
+  to { transform: rotate(5deg) translateY(-3px); }
+}
+
+@keyframes kiss-float {
+  from { transform: translateY(2px) scale(0.9); }
+  to { transform: translateY(-8px) scale(1.1); }
 }
 
 @media (max-width: 480px) {
   .card { padding: 1.5rem 1rem 2rem; }
   #messageBubble { min-height: 2.8rem; }
+}
+
+@media (max-height: 600px) {
+  .card { padding: 1rem 1rem 0.75rem; }
+  #messageBubble {
+    min-height: 2.2rem;
+    margin: 0.35rem 0 0.45rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .rabbit {
+    width: clamp(210px, 54vh, 250px);
+    height: clamp(240px, 60vh, 270px);
+  }
+  .bunny-stage { bottom: 30px; }
+  .gift-box { height: 44%; }
+  .hint { margin-top: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
